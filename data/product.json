@@ -1,0 +1,145 @@
+[
+  {
+    "title": "Head Graphene360+Alpha Elite Negro",
+    "description": "Excelente estado",
+    "price": 200,
+    "thumbnail": "thumbnail",
+    "code": "abc5466",
+    "status": true,
+    "stock": 1,
+    "category": "palas",
+    "id": 0
+  },
+  {
+    "title": "Adidas Training CTRL",
+    "description": "Carbono 2.0",
+    "price": 400,
+    "thumbnail": "thumbnail",
+    "code": "abc5467",
+    "status": true,
+    "stock": 3,
+    "category": "palas",
+    "id": 1
+  },
+  {
+    "title": "Nox Pala MI10 Pro cup",
+    "description": "fibra de carbono 2.0",
+    "price": 500,
+    "thumbnail": "thumbnail",
+    "code": "abc5468",
+    "status": true,
+    "stock": 10,
+    "category": "palas",
+    "id": 2
+  },
+  {
+    "title": "Adidas Metalbone 3.2",
+    "description": "Balance Alto con fibra de carbono",
+    "price": 300,
+    "thumbnail": "thumbnail",
+    "code": "abc5469",
+    "status": true,
+    "stock": 7,
+    "category": "palas",
+    "id": 3
+  },
+  {
+    "title": "Nox Pala At10 Genius 18k",
+    "description": "Fibra de carbono 2.0 Redonda",
+    "price": 300,
+    "thumbnail": "thumbnail",
+    "code": "abc5469",
+    "status": true,
+    "stock": 7,
+    "category": "palas",
+    "id": 4
+  },
+  {
+    "title": "Adidas Pala Kaltom Attk 2.0",
+    "description": "fibra de carbono buen balance para potencia",
+    "price": 300,
+    "thumbnail": "thumbnail",
+    "code": "abc5469",
+    "status": true,
+    "stock": 7,
+    "category": "palas",
+    "id": 5
+  },
+  {
+    "title": "Wilson Pala Ws 10.23",
+    "description": "Azul fibra de vidrio y carbono",
+    "price": 300,
+    "thumbnail": "thumbnail",
+    "code": "abc5469",
+    "status": true,
+    "stock": 7,
+    "category": "palas",
+    "id": 6
+  },
+  {
+    "title": "Varlion Avant C ti Difusor Black Negro",
+    "description": "Carbono 2.0",
+    "price": 300,
+    "thumbnail": "thumbnail",
+    "code": "abc5469",
+    "status": true,
+    "stock": 7,
+    "category": "palas",
+    "id": 7
+  },
+  {
+    "title": "Pelotitas de padel Wilson",
+    "description": "buen pique para cancha de cemento",
+    "price": 30,
+    "thumbnail": "thumbnail",
+    "code": "abc5469",
+    "status": true,
+    "stock": 7,
+    "category": "pelotas",
+    "id": 8
+  },
+  {
+    "title": "Pelotitas Bullpadel",
+    "description": "buen pique para cancha de cemento",
+    "price": 32,
+    "thumbnail": "thumbnail",
+    "code": "abc5469",
+    "status": true,
+    "stock": 7,
+    "category": "pelotas",
+    "id": 9
+  },
+  {
+    "title": "Camiseta Bullpadel",
+    "description": "muy buena tela deportiva",
+    "price": 100,
+    "thumbnail": "thumbnail",
+    "code": "abc5469",
+    "status": true,
+    "stock": 7,
+    "category": "indumentaria",
+    "id": 10
+  },
+  {
+    "title": "short deportivo",
+    "description": "short",
+    "price": 80,
+    "thumbnail": "thumbnail",
+    "code": "abc5469",
+    "status": true,
+    "stock": 7,
+    "category": "indumentaria",
+    "id": 11
+  },
+  {
+    "title": "medias wilson",
+    "description": "muy buena tela",
+    "price": 45,
+    "thumbnail": "thumbnail",
+    "code": "abc5469",
+    "status": true,
+    "stock": 7,
+    "category": "indumentaria",
+    "id": 12
+  }
+]
