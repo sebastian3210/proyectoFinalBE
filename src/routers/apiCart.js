@@ -27,7 +27,7 @@ apiCart.get('/:cid', async (req,res)=>{
         res.status(500).send('Internal server error')
     }
 })
-apiCart.post('/:cid/product/:pid', async (rew, res)=>{
+apiCart.post('/:cid/product/:pid', async (req, res)=>{
     try{
         const cartId = parseInt(req.params.cid)
         const productId = parseInt(req.params.pid)
