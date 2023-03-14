@@ -56,8 +56,8 @@ apiProduct.put('/:pid',async (req,res,next)=>{
         next(error)
     }
     try{
-        const update = await productManager.updateProduct(req.params.pid, productNew)
-        res.json(update)
+        const updateNew = await productManager.updateProduct(req.params.pid, productNew)        
+        res.json(updateNew)
     }catch(error){
         res.status(400).json({message : error.message})
       //  next(error)

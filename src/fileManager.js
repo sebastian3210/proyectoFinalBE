@@ -63,20 +63,49 @@ export default class ProductManager{
             return console.log('producto eliminado')
         }
     }
+    /*
+    updateProduct = async (id, updatedProduct) => {
+        try {
+          let products = await this.getProducts();
+          let searchId = products.findIndex(prod => prod.id == id);
+          console.log('ID:', id);
+          console.log('searchId:', searchId);
+          if (searchId === -1) {
+            throw new Error('Producto no encontrado para el update');
+          }
+          products[searchId] = { ...updatedProduct, id: Number(id) };
+          console.log(products)
+          await this.saveProduct(products);
+          console.log(updatedProduct)          
+          return updatedProduct
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      
+*/
+  
 
     async updateProduct(id, update){
-        await this.getProducts()
-        const searchId = this.product.findIndex(product => product.id === id)
+        let myProduct = await this.getProducts()
+        let searchId = myProduct.findIndex(prod => prod.id == id)
+        console.log('ID:', id);
+        //console.log('PRODUCT:', product);
+        console.log('searchId:', searchId);
+        
 
         if(searchId === -1){
             throw new Error ('Producto no encontrado para el update')
         } else{
-            this.product[searchId] = update
+            myProduct[searchId] = {...this.product[searchId], ...update} //{ ...update, id: Number(id) }  // {...this.product[searchId], ...update}     //update
             await this.saveProduct()
             console.log('producto update')
+            console.log('updated product:', this.product[searchId]);
+            console.log(this.product)
             return update
         }
     }
+  
 }
 
 export class Products{
