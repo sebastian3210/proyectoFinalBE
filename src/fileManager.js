@@ -10,8 +10,8 @@ export default class ProductManager{
     async getProducts(){
         try{
         const products = await fs.readFile(this.ruta, 'utf-8')
-        
-        return await  JSON.parse(products)
+        this.product = JSON.parse(products)
+        //return await  JSON.parse(products)
 
         }
         catch(error){
@@ -63,49 +63,22 @@ export default class ProductManager{
             return console.log('producto eliminado')
         }
     }
-    /*
-    updateProduct = async (id, updatedProduct) => {
-        try {
-          let products = await this.getProducts();
-          let searchId = products.findIndex(prod => prod.id == id);
-          console.log('ID:', id);
-          console.log('searchId:', searchId);
-          if (searchId === -1) {
-            throw new Error('Producto no encontrado para el update');
-          }
-          products[searchId] = { ...updatedProduct, id: Number(id) };
-          console.log(products)
-          await this.saveProduct(products);
-          console.log(updatedProduct)          
-          return updatedProduct
-        } catch (error) {
-          console.log(error);
-        }
-      };
-      
-*/
-  
-
     async updateProduct(id, update){
-        let myProduct = await this.getProducts()
-        let searchId = myProduct.findIndex(prod => prod.id == id)
-        console.log('ID:', id);
-        //console.log('PRODUCT:', product);
+        await this.getProducts()
+        let searchId = this.product.findIndex(prod => prod.id == id)
+        console.log('ID:', id);        
         console.log('searchId:', searchId);
         
 
         if(searchId === -1){
             throw new Error ('Producto no encontrado para el update')
         } else{
-            myProduct[searchId] = {...this.product[searchId], ...update} //{ ...update, id: Number(id) }  // {...this.product[searchId], ...update}     //update
+            this.product[searchId] = {...this.product[searchId], ...update} 
             await this.saveProduct()
             console.log('producto update')
-            console.log('updated product:', this.product[searchId]);
-            console.log(this.product)
             return update
         }
-    }
-  
+    }  
 }
 
 export class Products{
@@ -161,4 +134,3 @@ await productManager.addproduct(product12)
 await productManager.addproduct(product13)
 
 
-  //{...this.product[searchId],...id,stock:45};

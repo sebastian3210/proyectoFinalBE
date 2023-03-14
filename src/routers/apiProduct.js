@@ -44,6 +44,7 @@ apiProduct.post('/', async(req,res)=>{
     res.json(add)
     console.log(add)
 })
+
 apiProduct.put('/:pid',async (req,res,next)=>{
     let productNew
     try{
@@ -51,18 +52,19 @@ apiProduct.put('/:pid',async (req,res,next)=>{
             id: req.params.pid,
             ...req.body
         })
-    } catch(error){
-       // res.status(400).json({message : error.message})
+    } catch(error){      
         next(error)
     }
     try{
         const updateNew = await productManager.updateProduct(req.params.pid, productNew)        
         res.json(updateNew)
     }catch(error){
-        res.status(400).json({message : error.message})
-      //  next(error)
+        res.status(400).json({message : error.message})      
     }    
 })
+
+
+
 
 apiProduct.delete('/:pid', async(req, res)=>{
     try{
