@@ -63,7 +63,7 @@ export default class CartManager{
         if(searchId === -1){
             throw new Error ('Carrito no encontrado para el update')
         } else{
-            this.cart[searchId] = update       //{...this.product[searchId],...id,stock:45};
+            this.cart[searchId] = update     
             await this.saveCart();
             console.log('cart update')
             return update

@@ -58,25 +58,24 @@ export default class ProductManager{
         if(!searchId){
             console.warn('Producto no encontrado')
         } else{
-            this.product.splice(1, searchId);
-            await this.saveProduct();
+            this.product.splice(searchId, 1);
+            await this.saveProduct();         
             return console.log('producto eliminado')
         }
     }
+
     async updateProduct(id, update){
-        await this.getProducts();
-        let searchId = this.product.findIndex(product=>product.id === id);
+        await this.getProducts()
+        const searchId = this.product.findIndex(product => product.id === id)
 
         if(searchId === -1){
             throw new Error ('Producto no encontrado para el update')
         } else{
-            this.product[searchId] = update       //{...this.product[searchId],...id,stock:45};
-            await this.saveProduct();
+            this.product[searchId] = update
+            await this.saveProduct()
             console.log('producto update')
             return update
         }
-
-
     }
 }
 
@@ -131,3 +130,6 @@ await productManager.addproduct(product10)
 await productManager.addproduct(product11)
 await productManager.addproduct(product12)
 await productManager.addproduct(product13)
+
+
+  //{...this.product[searchId],...id,stock:45};

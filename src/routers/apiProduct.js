@@ -44,7 +44,6 @@ apiProduct.post('/', async(req,res)=>{
     res.json(add)
     console.log(add)
 })
-
 apiProduct.put('/:pid',async (req,res,next)=>{
     let productNew
     try{
@@ -53,23 +52,25 @@ apiProduct.put('/:pid',async (req,res,next)=>{
             ...req.body
         })
     } catch(error){
-        res.status(400).json({message : error.message})
+       // res.status(400).json({message : error.message})
+        next(error)
     }
     try{
-        const update = await productManager.updateProduct(req.params.pid.productNew)
+        const update = await productManager.updateProduct(req.params.pid, productNew)
         res.json(update)
     }catch(error){
         res.status(400).json({message : error.message})
-        next()
+      //  next(error)
     }    
 })
 
-apiProduct.delete('/:pid', async(req, res,next)=>{
+apiProduct.delete('/:pid', async(req, res)=>{
     try{
         const deleteP = await productManager.deleteProduct(req.params.pid)
+        console.log(productManager)
         res.json(deleteP)
     }catch(error){
         res.status(404).json({message : error.message})
     }
-    next()
+    
 })
